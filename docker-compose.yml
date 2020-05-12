@@ -1,0 +1,19 @@
+version: "3"
+
+services: 
+
+  tomcat: 
+    image: amarnath510/docker-my-tomcat-image
+    # name: tomcat-docker-compose - Not working
+    ports: 
+      - 8181:8080
+
+  mysql: 
+    image: amarnath510/mysql-5.6-docker-image
+    # name: mysql-docker-compose - Not working
+    ports: 
+      - 3306:3306
+    environment: 
+      MYSQL_ROOT_PASSWORD: dev
+      MYSQL_DATABASE: company
+
